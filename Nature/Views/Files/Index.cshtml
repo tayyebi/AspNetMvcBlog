@@ -1,0 +1,26 @@
+﻿@model IEnumerable<v_File>
+
+@Html.ActionLink("آپلود", "Upload")
+<table>
+    <tr>
+        <th>نام</th>
+        <th>نوع</th>
+        <th>حجم</th>
+        <th>لینک دانلود</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Type</td>
+            <td>@item.Length b</td>
+            <td>
+                @Html.ActionLink("دانلود", "Download/" + item.id)
+            </td>
+            <td>
+                @Html.ActionLink("حذف", "Delete/" + item.id)
+            </td>
+        </tr>
+    }
+</table>

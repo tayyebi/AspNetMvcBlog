@@ -1,0 +1,17 @@
+﻿.Body{
+    background:none;
+}
+form{
+    display:block;
+    margin: 0 auto 0 auto;
+    width:20em;
+    background-color:#808080;
+    box-shadow: 0 0 2em #000000;
+    padding:2em;
+    border-radius:2em;
+}
+form input, form input[type=submit]{
+    display:block;
+    margin:0 auto 0 auto;
+    margin-top:2em;
+}

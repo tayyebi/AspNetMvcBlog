@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "سامانه مدیریت محتوی" + Nature.App_Code.About.AppName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="Menu">
+    @Html.ActionLink("خروج","Logout", "Authorize")
+</div>
+<div class="Body">
+@RenderBody()
+</div>

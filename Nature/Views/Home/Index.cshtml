@@ -1,0 +1,8 @@
+﻿@model IEnumerable<v_Group>
+@{
+    ViewBag.Title = "خانه";
+}
+@foreach (var item in Model)
+{
+    @Html.ActionLink(item.Name, "Group/" + item.Id)
+}

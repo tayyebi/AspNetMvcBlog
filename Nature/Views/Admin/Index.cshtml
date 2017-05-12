@@ -1,0 +1,27 @@
+﻿@model IEnumerable<v_Admin>
+@Html.ActionLink("تعریف ادمین جدید", "Create")
+<table>
+    <tr>
+        <th>
+            نام کاربری
+        </th>
+        <th>
+            نام و نام خانوادگی
+        </th>
+        <th></th>
+    </tr>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @item.Username
+        </td>
+        <td>
+            @item.Fullname
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit/" + item.Username) 
+        </td>
+    </tr>
+}
+</table>

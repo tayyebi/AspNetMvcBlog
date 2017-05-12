@@ -1,0 +1,8 @@
+﻿@{ 
+    ViewBag.Message = "بارگذاری فایل جدید";
+}
+<form method="post" enctype="multipart/form-data">
+    نام: <input type="text" name="FileName" />
+    فایل: <input type="file" name="UploadedFile" />
+    <input type="submit" value="بارگذاری" />
+</form>

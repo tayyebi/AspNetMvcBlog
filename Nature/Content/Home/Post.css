@@ -1,0 +1,13 @@
+﻿#Author, #Title, #Date, #Group, #Body{
+    display:block;
+}
+#Author, #Title, #Date, #Group{
+    text-align:center;
+}
+#Title{
+    
+}
+#Body{
+    background-color:white;
+    padding:1em;
+}

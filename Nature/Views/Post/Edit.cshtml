@@ -1,0 +1,20 @@
+﻿@model IEnumerable<v_Group>
+@{
+    ViewBag.Message = "ویرایش پست";
+}
+<form method="post">
+    عنوان: <input type="text" value="@ViewBag.PostTitle" name="Title" />
+    گروه:
+    <select name="GroupId">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select>
+    خلاصه:
+    <textarea name="Abstract" cols="40">@ViewBag.PostAbstract</textarea>
+    <hr />
+    هر چه میخواهد دل تنگت بگو:
+    <textarea name="Body">@ViewBag.PostBody</textarea>
+    <input type="submit" value="ارسال @DateTime.Now.ToString()" />
+</form>

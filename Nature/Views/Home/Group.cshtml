@@ -1,0 +1,9 @@
+﻿@model IEnumerable<v_Post>
+
+@foreach (var item in Model)
+{
+    <div id="Post">
+        @Html.ActionLink(item.Title , "Post/" + item.Id)
+        <div id="abstract">@Html.Raw(item.Abstract)</div>
+    </div>
+}

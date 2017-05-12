@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Sharifi">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Theme/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/_Layout.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/@("Content/" + HttpContext.Current.Request.RequestContext.RouteData.Values["controller"] + "/" + @HttpContext.Current.Request.RequestContext.RouteData.Values["action"] +".css")" />
+    <script src="~/Scripts/_Layout.js"></script>
+    <script src="~/@("Scripts/" + HttpContext.Current.Request.RequestContext.RouteData.Values["controller"] + "/" + @HttpContext.Current.Request.RequestContext.RouteData.Values["action"] +".js")"></script>
+</head>
+<body style="direction:rtl">
+    @try
+    {
+        if (ViewBag.Message != null && ViewBag.Message != "")
+        {
+            <div class="Message">
+                @Html.Raw(ViewBag.Message)
+            </div>
+        }
+    }
+    catch { }
+    <header>
+        <h1>@Nature.App_Code.About.AppName</h1>
+    </header>
+    @RenderBody()
+    <footer>
+        برخی از حقوق محفوظ است © @DateTime.Now.Year
+    </footer>
+</body>
+</html>

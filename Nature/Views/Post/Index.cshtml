@@ -1,0 +1,24 @@
+﻿@model IEnumerable<v_Post>
+@{ 
+    ViewBag.Title = "مدیریت پست ها";
+}
+@Html.ActionLink("نمایش 300 پست آخر", "Index/300")
+@Html.ActionLink("ایجاد پست جدید", "Create")
+<table>
+    <tr>
+        <th>
+            عنوان
+        </th>
+        <th></th>
+    </tr>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Title</td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit/" + item.Id)
+            @Html.ActionLink("حذف", "Delete/" + item.Id)
+        </td>
+    </tr>
+}
+</table>
